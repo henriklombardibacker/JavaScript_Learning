@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8"> 
+    <title>Boolean</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Javascript boolean-setninger oppgaver</h1>
+    <br>
+    <br>
+    <h2>Sjekk om du kan øvelseskjøre eller ikke:</h2>
+
+    <label for="age-check">Hva er din alder?</label>
+    <input type="number" name="" id="age-check">
+    <br>
+    <br>
+    <label for="required-course">Har du gjennomført trafikalt grunnkurs?</label>
+    <input type="checkbox" name="" id="required-course">
+    <br>
+    <br>
+    <button onclick="HandleDrivingPractice()">Kan du øvelseskjøre?</button>
+    <input type="text" disabled="true" name="" id="output">
+
+    <script>
+
+        function HandleDrivingPractice() {
+            const number = document.getElementById("age-check").value
+            const checkbox = document.getElementById("required-course")
+            const text = document.getElementById("output")
+
+            console.log(typeof number)
+            console.log(number)
+
+            if(number == "") {
+                output.value = "Skriv inn et tall"
+            }
+
+            else if(checkbox.checked && number >= 16) {
+                output.value = "Du kan øvelseskjøre."
+            }
+
+            else if(checkbox.checked == false && number >= 25) {
+                output.value = "Du kan øveleseskjøre uten traffikalt grunnkurs hvis du er over 25."
+            }
+
+            else if(checkbox.checked == false && number < 16){
+                output.value = "Du kan ikke øvelseskjøre"
+            }
+
+            else {
+                output.value = "Du kan ikke øvelseskjøre"
+            }
+        }
+
+    </script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2>Bagasjesjekk</h2>
+
+    <label for="bagasjevekt">Hvor mye veier kofferten din i kg?</label>
+    <input type="number" name="" id="bagasjevekt">
+    <button onclick="HandleBagageWeight()">Resultat:</button>
+    <input type="text" disabled="true" name="" id="output2">
+
+    <script>
+        function HandleBagageWeight() {
+                    const number = document.getElementById("bagasjevekt").value
+                    const text = document.getElementById("output2")
+
+                    if(number == "") {
+                        output2.value = "Skriv inn et tall"
+                    }
+                    
+                    else if(number < 2) {
+                        output2.value = "UGYLDIG BAGASJE"
+                    }
+
+                    else if(number > 23 && number <= 32) {
+                        let antallkgovervekt = number - 23
+                        let overvekt = antallkgovervekt * 130
+                        output2.value = "Siden kofferten din er " + antallkgovervekt + " kg overvekt må du betale en gebyr på " + overvekt + " kr for at bagasjen skal være gyldig."
+                    }
+
+                    else if(number > 32) {
+                        output2.value = "UGYLDIG BAGASJE"
+                    }
+
+                    else {
+                        output2.value = "Du har en gyldig koffert. Dermed trenger du ikke betale noe."
+                    }
+                }
+    </script>
+
+</body>

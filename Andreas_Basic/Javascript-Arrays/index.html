@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8"> 
+    <title>Arrays</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <h1>Javascript Arrays</h1>
+    <p>Sjekk console i inspect element.</p>
+
+    <script>
+            var arr = ["Hodet", "kroppen", "Halen"]
+
+'// Hent ut første element til konstant'
+
+            console.log(arr[0])
+
+'// Hent ut siste element'
+
+            console.log(arr[2])
+
+'// sett siste element av array til verdi av konstant av første'
+
+            console.log(arr[2], arr[0])
+
+'// sett første element av array til siste'
+
+            console.log(arr[2],arr[1],arr[0])
+
+
+snuddSlange = ["Halen", "Kroppen", "...", "Hodet"]
+
+            console.log(snuddSlange)
+    </script>
+
+    <script>
+
+        function loop(number) {
+            for (let index of number) {
+                console.log(index)
+            }
+        } loop(["magnus","jo","henrik"])
+
+    </script>
+
+    <script>
+
+        let number = 10
+
+        function loop(number) {
+            arr2 = []
+            for (let index = 0; index < number; index++) {
+                arr2.push(index)
+                
+            }
+            return arr2
+        }
+
+    </script>
+
+</body>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        arr = [1, 2, 3, 4, "5"]
+
+        students = ["Harry", "Ronny", "Hermine"]
+
+        console.log(arr)
+        console.log(students)
+
+        console.log(arr[0], arr[1], arr[2], arr[3])
+
+        arr[0] = 0
+
+        arr.push(6) // arr[5]
+
+        arr[arr.length -1] // ar
+
+        console.log(arr[0])
+
+        students.push("Draco")
+        console.log(students)
+
+        students.sort() // notice side-effects
+
+        console.log("has draco is :" + students.includes("Draco"))
+
+        console.log(students) // nå er den sortert
+
+
+        // Oversikt over metoder i array: 
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+
+        function addStudent(studentName) {
+            
+        }
+
+        function handleAdd() {
+            let studentName = document.getElementById("inputText").value
+
+            students.push(studentName)
+
+            document.getElementById("outputText").value = students   
+        }
+
+
+
+
+
+
+        function loop(number) {
+            for (let index = 0; index < number; index++) {
+                console.log(index) 
+            }
+        }
+
+        function handleAdd2() {
+            const studentName = document.getElementById("inputText").value
+            const list = document.getElementById("studentList")
+
+            students.push(studentName)
+
+            addToList(students, list)
+        }
+
+        function addToList(students, list) {
+            list.innerHTML = ""
+            for (const student of students) {
+                list.innerHTML += `<li>${student}</li>`
+            }
+        }
+
+
+    </script>
+
+    <input type="text" name="" id="inputText">
+    <button onclick="handleAdd2()">Add</button>
+    <input type="text" name="" disabled=true id="outputText">
+    
+    
+    
+    <ul id="studentList">
+
+    </ul>
+    
+</body>
+</html>

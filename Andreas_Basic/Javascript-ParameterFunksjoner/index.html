@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8"> 
+    <title>Funksjoner</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <script>
+
+        function die(sides) {
+            let number
+
+            number = Math.floor((Math.random()*(sides - 1)) +1);
+
+            return number
+
+        }
+
+        function celsiusToFahrenheit(celsius) {
+            let number
+            number = (celsius * 1.8 + 32)
+            return number
+        }  
+
+        function fahrenheitToCelcius(fahrenheit) {
+            let number
+            number = (fahrenheit - 32) / 1.8
+            return number
+        }
+
+    </script>
+    <br>
+    <h1>Konversjoner med parameter funksjoner</h1>
+    <br>
+    <br>
+
+    <input type="number" id="celsiusinput">
+    <select id="fahrenheitcelsius">
+        <option value="fahrenheit">Celsius til Fahrenheit</option>
+        <option value="celsius">Fahrenheit til Celsius</option>
+    </select>
+    <button onclick="handleCalculate()">Konverter</button>
+    <input type="number" disabled="true" id="output">
+
+    <script>
+        function handleCalculate(){
+            let celsius = document.getElementById("celsiusinput").value
+            let fahrenheitcelsius = document.getElementById("fahrenheitcelsius").value
+            let output
+            switch(fahrenheitcelsius){
+                case "fahrenheit":
+                    output = celsiusToFahrenheit(celsius)
+                    break;
+                case "celsius":
+                    output = fahrenheitToCelcius(celsius)
+                    break;
+
+            }
+            document.getElementById("output").value = output
+        }
+    </script>
+
+</body>

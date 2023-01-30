@@ -1,5 +1,5 @@
 
-let myStr = "Poly cow!";
-myStr = "Holy cow!";
+let myStr = "polycon";
+myStr = "!";
 
 console.log(myStr)

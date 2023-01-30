@@ -1,5 +1,10 @@
+function wordBlanks(myNoun, myAdjective, myAdverb, myVerb) {
 
-let myStr = "polycon";
-myStr = "!";
+    var result = "";
+    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to its doghouse " + myAdverb
 
-console.log(myStr)
+    return result;
+}
+
+console.log(wordBlanks("dog", "big", "quickly", "ran"));
+console.log(wordBlanks("bike", "slow", "slowly", "flew"));

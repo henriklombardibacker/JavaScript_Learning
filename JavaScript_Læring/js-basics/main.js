@@ -1,10 +1,11 @@
-function wordBlanks(myNoun, myAdjective, myAdverb, myVerb) {
-
-    var result = "";
-    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to its doghouse " + myAdverb
-
-    return result;
+function reusableFunction(x, y) {
+    console.log(x + y)
 }
 
-console.log(wordBlanks("dog", "big", "quickly", "ran"));
-console.log(wordBlanks("bike", "slow", "slowly", "flew"));
+reusableFunction(55, 55);
+
+function reusableFunction2(x, y) {
+    console.log(x - y)
+}
+
+reusableFunction2(55, 55);

@@ -1,11 +1,9 @@
-function reusableFunction(x, y) {
-    console.log(x + y)
+
+function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+        return "Yes, that was true";
+    }
+    return "No, that was false";
 }
 
-reusableFunction(55, 55);
-
-function reusableFunction2(x, y) {
-    console.log(x - y)
-}
-
-reusableFunction2(55, 55);
+console.log(trueOrFalse(false));

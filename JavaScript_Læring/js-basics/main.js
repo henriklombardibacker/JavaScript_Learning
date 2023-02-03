@@ -1,9 +1,9 @@
 
-function trueOrFalse(wasThatTrue) {
-    if (wasThatTrue) {
-        return "Yes, that was true";
+function testEqual(val, strictVal) {
+    if (val === strictVal) {
+        return "Equal";
     }
-    return "No, that was false";
+    return "Not Equal";
 }
 
-console.log(trueOrFalse(false));
+console.log(testEqual(5, '5'));

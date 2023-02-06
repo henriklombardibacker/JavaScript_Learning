@@ -1,9 +1,10 @@
 
-function testEqual(val, strictVal) {
-    if (val === strictVal) {
-        return "Equal";
+function testLogical(val) {
+    if (val) {
+        if (val) {
+            return 'Yeeboi';
+        }
     }
-    return "Not Equal";
 }
 
-console.log(testEqual(5, '5'));
+console.log(testLogicall(4.4));

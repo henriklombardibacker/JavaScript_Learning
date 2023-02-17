@@ -1,22 +1,10 @@
-function caseInSwitch(val) {
-    let answer = '';
-    switch(val) {
-        case 1:
-            answer = "alpha";
-            break;
-        case 2:   
-            answer = "beta";
-            break;
-        case 3:   
-            answer = "gamma";
-            break;
-        case 4:   
-            answer = "delta ";
-            break;
+function abTest(a, b) {
+
+    if (a < 0 || b < 0) {
+        return undefined;
     }
 
-    return answer;
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
 }
 
-console.log(caseInSwitch(4));
-
+console.log(abTest(-2,2));

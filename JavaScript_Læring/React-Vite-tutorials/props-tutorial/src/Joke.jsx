@@ -1,8 +1,8 @@
-export default function Joke(dadJoke, rating) {
+export default function Joke(props) {
 
     let stars = ""
     for (let i = 0; i < 5; i++) {
-        if (i < rating) {
+        if (i < props.rating) {
             stars += "⭐️"
         } else {
             stars += "☆"
@@ -11,7 +11,7 @@ export default function Joke(dadJoke, rating) {
 
     return (
         <div>
-    '      <p>{dadJoke}</p>
+    '      <p>{props.Joke}</p>
            <p>{stars}</p>'
         </div>
     )
